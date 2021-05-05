@@ -5,5 +5,5 @@ This is a Code Lab style course for learning Kubernetes, with the following less
 1. Your Kubernetes Environment (prerequisite)
 1. hello, world
 1. Appendix
-   * [About Kubernetes](appendix/about-kubernetes.md)
+   * [About Kubernetes](docs/appendix/about-kubernetes.md)
    * [Other Guides](docs/appendix/other-guides.md)
