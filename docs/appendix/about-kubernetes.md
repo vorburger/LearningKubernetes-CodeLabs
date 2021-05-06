@@ -1,4 +1,4 @@
-# Kubernetes
+# About Kubernetes
 
 [Kubernetes](https://kubernetes.io) is an
 [open source](https://github.com/kubernetes/kubernetes) container orchestrator.
@@ -10,12 +10,9 @@ to this open source community.
 
 The [Cloud Native Computing Foundation](https://www.cncf.io) (CNCF) is the
 [steward](https://www.cncf.io/services-for-projects/) of an
-[ecosystem of projects](https://www.cncf.io/projects/) (and [sandbox projects](https://www.cncf.io/sandbox-projects/)) that has spawned up
-around Kubernetes, with
-[tens of thousands of contributors](https://www.cncf.io/cncf-kubernetes-project-journey/).
-There are many many more Kubernetes related open source projects not hosted by the CNCF. There is also a vibrant ecosystem of commercial vendors with cloud native Kubernetes related products.
+[ecosystem of 50+ projects](https://www.cncf.io/projects/) (and [sandbox projects](https://www.cncf.io/sandbox-projects/)) that has spawned up around Kubernetes, with [97k people from 177 countries contributing 1.3B lines of code, as of September 2020](https://youtu.be/u71aL6aVDPg?t=168) (and as of [August 2019, 35k contributors](https://www.cncf.io/cncf-kubernetes-project-journey/)).
+There are many more Kubernetes related open source projects not hosted by the CNCF. There is also a vibrant ecosystem of vendors offering cloud native Kubernetes related commercial products, solutions and services.
 
-There's some
-[History on Wikipedia](https://en.wikipedia.org/wiki/Kubernetes#History), or
+Wikipedia has [Kubernetes' History](https://en.wikipedia.org/wiki/Kubernetes#History), or
 e.g. [this Origin Story](https://kube.academy/lessons/the-origin-of-kubernetes)
 about Kubernetes (AKA k8s).
