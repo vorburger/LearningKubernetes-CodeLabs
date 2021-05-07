@@ -2,8 +2,8 @@
 
 [Kubernetes](https://kubernetes.io) is an
 [open source](https://github.com/kubernetes/kubernetes) container orchestrator.
-Google initiated this project in 2014, [inspired by Borg](https://kubernetes.io/blog/2015/04/borg-predecessor-to-kubernetes/) (see [original article](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44843.pdf), the [original paper](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43438.pdf), and [second paper](https://dl.acm.org/doi/pdf/10.1145/3342195.3387517)). It has turned into one
-of / the most successful and active open source community, overshadowing earlier
+Google initiated this project in 2014, [inspired by Borg](https://kubernetes.io/blog/2015/04/borg-predecessor-to-kubernetes/) (see [original article](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44843.pdf), the [original paper](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43438.pdf), and [second paper](https://dl.acm.org/doi/pdf/10.1145/3342195.3387517)). It has turned into [one
+of the most successful and active open source communities](https://www.cncf.io/blog/2017/06/05/30-highest-velocity-open-source-projects/), eclipsing earlier
 similar projects such as Apache Mesos or Docker Swarm et al. Google is the
 [company with most contributions](https://k8s.devstats.cncf.io/d/9/companies-table?orgId=1)
 to this open source community.
