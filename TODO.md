@@ -1,5 +1,9 @@
-- [ ] More lessons:
+- [ ] Lessons:
 
+  - [ ] API: Build your first Kubernetes Resource Model (KRM) Custom Resource Definition (CRD)
+  - [ ] API: Build an Operator
+
+  - [ ] https://googlecontainertools.github.io/kpt/
   - [ ] https://github.com/kvaps/kubectl-build (or https://github.com/vmware-tanzu/buildkit-cli-for-kubectl)
   - [ ] https://BuildPacks.io, see [KubeCon Prez](https://static.sched.com/hosted_files/kccnceu2021/f3/IntroductionToCloudNativeBuildpacks_StephenLevineJesseBrown_v1.pdf)
   - [ ] https://github.com/kvaps/kubectl-node-shell (+ https://github.com/containers/toolbox ?)
