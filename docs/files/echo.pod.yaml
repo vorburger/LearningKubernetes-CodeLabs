@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: echoserver
+  namespace: default
+spec:
+  containers:
+  - image: k8s.gcr.io/echoserver:1.10
+    name: echoserver
+    
