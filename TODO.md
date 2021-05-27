@@ -2,9 +2,12 @@
 
 - [ ] Lessons:
 
-  - [ ] API: Build an Operator
+  - [ ] API: Build a Controller (Operator?)
+  - [ ] API: OpenAPI schema in separate file outside of CRD YAML, so that it's validated by super-linter's `VALIDATE_OPENAPI`
+  - [ ] API: Generate OpenAPI schema from ProtoBuf PB? See https://cuelang.org/docs/integrations/protobuf/ and https://cuelang.org/docs/integrations/openapi/
 
   - [ ] https://googlecontainertools.github.io/kpt/
+
   - [ ] https://github.com/kvaps/kubectl-build (or https://github.com/vmware-tanzu/buildkit-cli-for-kubectl)
   - [ ] https://BuildPacks.io, see [KubeCon Prez](https://static.sched.com/hosted_files/kccnceu2021/f3/IntroductionToCloudNativeBuildpacks_StephenLevineJesseBrown_v1.pdf)
   - [ ] https://github.com/kvaps/kubectl-node-shell (+ https://github.com/containers/toolbox ?)
