@@ -1,12 +1,10 @@
 # hello, world
 
-## echoserver
+## [echoserver](https://github.com/kubernetes/kubernetes/tree/master/test/images/echoserver)
 
     k create deployment echoserver --image=k8s.gcr.io/echoserver:1.10
     k expose deployment echoserver --type=LoadBalancer --port=8080
     curl $(minikube service --url=true echoserver)
-
-<!-- TODO where is the source code of this echoserver? -->
 
 ## Dashboard
 

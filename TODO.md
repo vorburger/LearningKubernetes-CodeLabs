@@ -1,6 +1,5 @@
 - [ ] Lessons:
 
-  - [ ] API: Build your first Kubernetes Resource Model (KRM) Custom Resource Definition (CRD)
   - [ ] API: Build an Operator
 
   - [ ] https://googlecontainertools.github.io/kpt/
