@@ -1,0 +1,37 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: foos.learning.vorburger.ch
+spec:
+  group: learning.vorburger.ch
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                bar:
+                  type: string
+                xyz:
+                  type: integer
+                  minimum: 1
+                  maximum: 10
+            status:
+              type: object
+              properties:
+                actualBar:
+                  type: string
+      subresources:
+        status: {}
+  names:
+    kind: Foo
+    singular: foo
+    plural: foos
+    shortNames:
+    - fo
+  scope: Namespaced

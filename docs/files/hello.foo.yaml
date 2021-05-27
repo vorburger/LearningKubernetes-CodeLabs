@@ -1,0 +1,8 @@
+kind: Foo
+apiVersion: learning.vorburger.ch/v1
+metadata:
+  name: hello
+  namespace: default
+spec:
+  bar: hello
+  xyz: 7

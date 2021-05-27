@@ -18,6 +18,16 @@ Kubernetes has a uniform Resource Model for all interactions you'll have with it
 
    Note how the YAML file shown is an extended version of the [echo.pod.yaml](files/echo.pod.yaml) which we _applied_. The additional fields are what the Kubernetes added to it when it _reconciled_ the _intent_ expressed by our original YAML.
 
+1. This _Pod_ is a (built-in) KRM API resource "kind". We can see all of them like this:
+
+       k api-resources
+       k api-versions
+
+1. We can learn more about each of them, as well as detailed documentation about the respective resource's fields:
+
+       k explain pod
+       k explain pod.spec.containers.image
+
 1. Clean up:
 
        k delete pod echoserver
