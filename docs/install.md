@@ -22,7 +22,7 @@ This creates a VM, and works equally well on Windows, Mac and Linux.
 ## minikube None driver
 
 To avoid creating a VM and run the Kubernetes control panel containers straight on the host,
-which is suitable e.g. inside a new Linux VM which isn't used for anything else, use the 
+which is suitable e.g. inside a new Linux VM which isn't used for anything else, use the
 _[Linux "none" (= bare-metal) driver](https://minikube.sigs.k8s.io/docs/drivers/none/)_,
 e.g. with Debian 10 simply:
 
@@ -42,7 +42,7 @@ e.g. with Debian 10 simply:
 The goal of each of the set-up options above, if successful, is that you should be able to run:
 
     k get pods -A
-    
+
 and see:
 
     NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
