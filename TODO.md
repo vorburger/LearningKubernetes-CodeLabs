@@ -1,3 +1,5 @@
+# ToDo
+
 - [ ] Lessons:
 
   - [ ] API: Build an Operator
@@ -39,8 +41,6 @@
       ssh: connect to host $IP port 22: Connection timed out
       ERROR: (gcloud.compute.ssh) [/usr/bin/ssh] exited with return code [255].
 
-- [ ] GitHub Action (pre-commit hook) to lint all markdown, check links, etc.
-
-- [ ] https://github.com/googlecodelabs/tools ? 
+- [ ] https://github.com/googlecodelabs/tools ?
 
 - [ ] https://codelabs.developers.google.com ?

@@ -8,7 +8,6 @@ To follow the lessons in this tutorial, you need to have the following prerequis
 
 There are several ways to set this up, see the options below. Alternatives include e.g. `kind`, `kubeadm`; or cloud hosted managed Kubernetes offerings like Google's GKE; or local distributions like k3s.io, k3s.io, OpenShift, et al. (We may add documentation about such other approaches later.)
 
-
 ## minikube Docker driver
 
 One of easiest ways to get started on a developer workstation is to use https://minikube.sigs.k8s.io/docs/start, and:
@@ -18,11 +17,10 @@ One of easiest ways to get started on a developer workstation is to use https://
 
 This creates a VM, and works equally well on Windows, Mac and Linux.
 
-
 ## minikube None driver
 
 To avoid creating a VM and run the Kubernetes control panel containers straight on the host,
-which is suitable e.g. inside a new Linux VM which isn't used for anything else, use the 
+which is suitable e.g. inside a new Linux VM which isn't used for anything else, use the
 _[Linux "none" (= bare-metal) driver](https://minikube.sigs.k8s.io/docs/drivers/none/)_,
 e.g. with Debian 10 simply:
 
@@ -36,13 +34,12 @@ e.g. with Debian 10 simply:
     sudo chown -R $(id -un):$(id -gn $(id -un)) /home/vorburger_google_com/.minikube/
     alias k="minikube kubectl -- "
 
-
 ## Test Installation
 
 The goal of each of the set-up options above, if successful, is that you should be able to run:
 
     k get pods -A
-    
+
 and see:
 
     NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE

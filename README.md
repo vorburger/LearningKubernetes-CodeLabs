@@ -1,4 +1,4 @@
-# Learning Kubernetes Codelabs
+# Learning Kubernetes Codelabs [![GitHub Super-Linter](https://github.com/vorburger/LearningKubernetes-CodeLabs/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 This is a Code Lab style course for learning Kubernetes, with the following lessons:
 

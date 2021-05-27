@@ -1,0 +1,10 @@
+# https://github.com/DavidAnson/markdownlint#optionsconfig
+# https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
+
+# Bare URL are OK
+MD034: false
+
+MD013:
+  line_length: 4096
+  strict: false
+  stern: false
