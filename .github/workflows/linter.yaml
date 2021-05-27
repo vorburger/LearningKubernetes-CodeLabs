@@ -20,3 +20,5 @@ jobs:
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # https://github.com/github/super-linter/issues/1601
+          VALIDATE_KUBERNETES_KUBEVAL: false
