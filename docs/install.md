@@ -8,7 +8,6 @@ To follow the lessons in this tutorial, you need to have the following prerequis
 
 There are several ways to set this up, see the options below. Alternatives include e.g. `kind`, `kubeadm`; or cloud hosted managed Kubernetes offerings like Google's GKE; or local distributions like k3s.io, k3s.io, OpenShift, et al. (We may add documentation about such other approaches later.)
 
-
 ## minikube Docker driver
 
 One of easiest ways to get started on a developer workstation is to use https://minikube.sigs.k8s.io/docs/start, and:
@@ -17,7 +16,6 @@ One of easiest ways to get started on a developer workstation is to use https://
     alias k="minikube kubectl -- "
 
 This creates a VM, and works equally well on Windows, Mac and Linux.
-
 
 ## minikube None driver
 
@@ -35,7 +33,6 @@ e.g. with Debian 10 simply:
 
     sudo chown -R $(id -un):$(id -gn $(id -un)) /home/vorburger_google_com/.minikube/
     alias k="minikube kubectl -- "
-
 
 ## Test Installation
 
