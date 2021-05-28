@@ -6,18 +6,20 @@ To follow the lessons in this tutorial, you need to have the following prerequis
 1. configuration to access it (in a `~/.kube/config` file)
 1. the `kubectl` CLI binary, aliased to `k`
 
-There are several ways to set this up, see the options below. Alternatives include e.g. `kind`, `kubeadm`; or cloud hosted managed Kubernetes offerings like Google's GKE; or local distributions like k3s.io, k3s.io, OpenShift, et al. (We may add documentation about such other approaches later.)
+There are different ways to set this up - pick one of the options below! (Alternatives include e.g. `kind`, `kubeadm`, k3s.io, microk8s.io, OpenShift, and others; we may add documentation about them later.)
 
-## minikube Docker driver
+## Local (or VM) Installations
+
+### minikube
 
 One of easiest ways to get started on a developer workstation is to use https://minikube.sigs.k8s.io/docs/start, and:
 
     minikube start
     alias k="minikube kubectl -- "
 
-This creates a VM, and works equally well on Windows, Mac and Linux.
+This typically creates a VM, and works equally well on Windows, Mac and Linux.
 
-## minikube None driver
+### minikube None driver
 
 To avoid creating a VM and run the Kubernetes control panel containers straight on the host,
 which is suitable e.g. inside a new Linux VM which isn't used for anything else, use the
@@ -35,7 +37,21 @@ e.g. with Debian 10 simply:
     sudo chown -R $(id -un):$(id -gn $(id -un)) ~/.minikube/
     alias k="minikube kubectl -- "
 
-## Test Installation
+## Cloud Installations
+
+### Google Cloud Shell minikube
+
+https://cloud.google.com/shell is an easy to use and ready-made VM which already includes Docker and Minikube, so you can simply:
+
+1. open https://shell.cloud.google.com (or `gcloud cloud-shell ssh [--ssh-flag="-A"]`)
+2. `minikube start`
+3. `alias k="minikube kubectl -- "`
+
+### Google Kubernetes Engine (GKE)
+
+See https://cloud.google.com/kubernetes-engine.
+
+## Test the Installation
 
 The goal of each of the set-up options above, if successful, is that you should be able to run:
 
