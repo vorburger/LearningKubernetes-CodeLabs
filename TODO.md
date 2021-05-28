@@ -1,34 +1,45 @@
 # ToDo
 
+- [ ] [`kind`](https://kind.sigs.k8s.io/docs/user/quick-start/) (and [here](https://book.kubebuilder.io/reference/kind.html)) as another Kubernetes "distributions" than `minikube` in [docs/install.md](docs/install.md)
+
+- [ ] contribute https://github.com/vorburger/LearningKubernetes-CodeLabs/blob/develop/docs/kubebuilder.md to https://book.kubebuilder.io as simpler first lesson before the full-blown cronjob example
+
 - [ ] Additional New Lessons
 
   - [ ] API: Run Foo Controller against https://github.com/kcp-dev/kcp instead of "real" (mini)kube
+  - [ ] https://sdk.operatorframework.io (https://github.com/operator-framework/operator-sdk)
+  - [ ] Testing controllers? https://book.kubebuilder.io/cronjob-tutorial/writing-tests.html
 
   - [ ] API: OpenAPI schema in separate file outside of CRD YAML, so that it's validated by super-linter's `VALIDATE_OPENAPI`
   - [ ] API: Generate OpenAPI schema from ProtoBuf PB? See https://cuelang.org/docs/integrations/protobuf/ and https://cuelang.org/docs/integrations/openapi/
 
   - [ ] https://googlecontainertools.github.io/kpt/
+  - [ ] https://fluxcd.io
+
+  - [ ] https://github.com/prometheus-operator/kube-prometheus#installing
+  - [ ] https://github.com/prometheus-operator/prometheus-operator
+
+  - [ ] Users Management via CRD
+  - [ ] https://cert-manager.io
 
   - [ ] https://github.com/kvaps/kubectl-build (or https://github.com/vmware-tanzu/buildkit-cli-for-kubectl)
   - [ ] https://BuildPacks.io, see [KubeCon Prez](https://static.sched.com/hosted_files/kccnceu2021/f3/IntroductionToCloudNativeBuildpacks_StephenLevineJesseBrown_v1.pdf)
   - [ ] https://github.com/kvaps/kubectl-node-shell (+ https://github.com/containers/toolbox ?)
   - [ ] https://knative.dev
   - [ ] https://www.openfaas.com
+  - [ ] https://k8slens.dev
 
 - [ ] Listen in to [Kubebuilder, Controller Runtime, and Controller Tools Meeting](https://docs.google.com/document/d/1Ih-2cgg1bUrLwLVTB9tADlPcVdgnuMNBGbUl4D-0TIk/)
  
 - [ ] Use https://github.com/monopole/mdrip to validate the lessons! (And add a "used by" section to its README.)
   Contribute the same to kubebuilder, see https://github.com/kubernetes-sigs/kubebuilder/issues/711
 
-- [ ] contribute https://github.com/vorburger/LearningKubernetes-CodeLabs/blob/develop/docs/kubebuilder.md to https://book.kubebuilder.io as simpler first lesson before the full-blown cronjob example
-
 - [ ] Other Kubernetes distributions than `minikube`:
 
-  - [ ] kubeadm
-  - [ ] kind
+  - [ ] kubeadm.. on CoreOS?
+  - [ ] https://k3s.io (https://k3d.io)
   - [ ] https://github.com/rootless-containers/usernetes
   - [ ] https://microk8s.io
-  - [ ] https://k3s.io (https://k3d.io)
   - [ ] https://k0sproject.io
 
 - [ ] CoreOS instead of Debian on GCP: Debian works, but CoreOS SSH keys are somehow missing:
