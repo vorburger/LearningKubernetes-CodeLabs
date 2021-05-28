@@ -36,16 +36,18 @@ based on [Eclipse Theia](https://theia-ide.org), are a great choice. Alternative
 
 1. edit the `controllers/foo_controller.go` and change the `Reconcile` function to look like this:
 
-   	   log := log.FromContext(ctx)
+   ```go
+   log := log.FromContext(ctx)
 
-	   var foo model.Foo
-	   if err := r.Get(ctx, req.NamespacedName, &foo); err != nil {
-		   log.Error(err, "Get failed")
-		   return ctrl.Result{}, client.IgnoreNotFound(err)
-	   }
+   var foo model.Foo
+   if err := r.Get(ctx, req.NamespacedName, &foo); err != nil {
+       log.Error(err, "Get failed")
+       return ctrl.Result{}, client.IgnoreNotFound(err)
+   }
 
-	   log.Info("Reconciled")
-	   return ctrl.Result{}, nil
+   log.Info("Reconciled")
+   return ctrl.Result{}, nil
+   ```
 
 1. re-run the controller `make run`
 
