@@ -14,6 +14,8 @@
   - [ ] https://knative.dev
   - [ ] https://www.openfaas.com
 
+- [ ] Use https://github.com/monopole/mdrip to validate the lessons!
+
 - [ ] Other Kubernetes distributions than `minikube`:
 
   - [ ] kubeadm
