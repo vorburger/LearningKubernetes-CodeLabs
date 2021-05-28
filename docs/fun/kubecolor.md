@@ -1,6 +1,6 @@
 # kubecolor
 
-Use https://github.com/dty1er/kubecolor to bring some colorize to your bland `kubectl` output:
+Use https://github.com/dty1er/kubecolor to bring some color to your bland `kubectl` output:
 
     sudo apt install -y kubecolor
 
