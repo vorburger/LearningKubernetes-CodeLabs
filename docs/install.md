@@ -31,7 +31,8 @@ e.g. with Debian 10 simply:
     sudo install minikube-linux-amd64 /usr/local/bin/minikube
     sudo -E minikube start --driver=none
 
-    sudo chown -R $(id -un):$(id -gn $(id -un)) /home/vorburger_google_com/.minikube/
+    sudo chown -R $(id -un):$(id -gn $(id -un)) ~/.kube/
+    sudo chown -R $(id -un):$(id -gn $(id -un)) ~/.minikube/
     alias k="minikube kubectl -- "
 
 ## Test Installation
