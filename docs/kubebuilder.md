@@ -36,14 +36,27 @@ based on [Eclipse Theia](https://theia-ide.org), are a great choice. Alternative
 
 1. edit the `controllers/foo_controller.go` and change the `Reconcile` function to look like this:
 
-   _TODO..._
+   	   log := log.FromContext(ctx)
 
-1. re-run `make run`
+	   var foo model.Foo
+	   if err := r.Get(ctx, req.NamespacedName, &foo); err != nil {
+		   log.Error(err, "Get failed")
+		   return ctrl.Result{}, client.IgnoreNotFound(err)
+	   }
 
-1. edit the `Foo` resource and change its `spec.foo` from `bar` to `baz`
+	   log.Info("Reconciled")
+	   return ctrl.Result{}, nil
 
-1. observe the logged output showing that the controller noticed it
+1. re-run the controller `make run`
 
-1. run `k get foo foo-sample -o yaml` and notice the new `status`
+1. edit the `Foo` resource and change its `spec.foo` from `bar` to `baz` (just to "touch" it)
+
+       k edit foo foo-sample
+
+1. observe how "Reconciled" is logged again
+
+## Add status
 
 _TODO: Add additional fields.. to `api/v1/foo_types.go`` and [re-generate the CRD YAML with `make`](https://book.kubebuilder.io/cronjob-tutorial/gvks.html#but-why-create-apis-at-all)..._
+
+1. run `k get foo foo-sample -o yaml` and notice the new `status`
