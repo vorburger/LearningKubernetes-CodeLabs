@@ -16,8 +16,11 @@ Kubernetes has a uniform Resource Model for all interactions you'll have with it
        k logs echoserver
        k get pod echoserver -o yaml
 
-   Note how the YAML shown is an extended version of the [echo.pod.yaml](files/echo.pod.yaml), which we _applied_ above.
-   The additional fields are what Kubernetes added when it _reconciled_ the _intent_ expressed by our original YAML.
+   Note how the YAML shown is an extended version of the [echo.pod.yaml](files/echo.pod.yaml), which we _applied_ above, now with:
+   
+   * some new `metadata` (like a `creationTimestamp` or a `uid`)
+   * additional `spec` (like system defaults; we could override those)
+   * the `status`, which Kubernetes added when it _reconciled_ the _desired_ state (AKA _intent)_ expressed by the `spec` with the system's `observed` state
 
 1. This _Pod_ is a (built-in) KRM API resource "kind" (type). We can see all of them like this:
 
