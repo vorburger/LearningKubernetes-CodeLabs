@@ -1,8 +1,9 @@
 # ToDo
 
-- [ ] Lessons:
+- [ ] Additional New Lessons
 
-  - [ ] API: Build a Controller (Operator?)
+  - [ ] API: Run Foo Controller against https://github.com/kcp-dev/kcp instead of "real" (mini)kube
+
   - [ ] API: OpenAPI schema in separate file outside of CRD YAML, so that it's validated by super-linter's `VALIDATE_OPENAPI`
   - [ ] API: Generate OpenAPI schema from ProtoBuf PB? See https://cuelang.org/docs/integrations/protobuf/ and https://cuelang.org/docs/integrations/openapi/
 
@@ -14,6 +15,8 @@
   - [ ] https://knative.dev
   - [ ] https://www.openfaas.com
 
+- [ ] Listen in to [Kubebuilder, Controller Runtime, and Controller Tools Meeting](https://docs.google.com/document/d/1Ih-2cgg1bUrLwLVTB9tADlPcVdgnuMNBGbUl4D-0TIk/)
+ 
 - [ ] Use https://github.com/monopole/mdrip to validate the lessons! (And add a "used by" section to its README.)
   Contribute the same to kubebuilder, see https://github.com/kubernetes-sigs/kubebuilder/issues/711
 
