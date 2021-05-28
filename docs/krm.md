@@ -6,7 +6,7 @@ Kubernetes has a uniform Resource Model for all interactions you'll have with it
 
        k delete deployment echoserver
 
-1. Glance at, and then _apply,_ the [echo.pod.yaml](files/echo.pod.yaml):
+1. Glance at, and then _apply,_ the [echo.pod.yaml](files/echo.pod.yaml) _resource_ of `kind: Pod`:
 
        k apply -f https://raw.githubusercontent.com/vorburger/LearningKubernetes-CodeLabs/develop/docs/files/echo.pod.yaml
 
@@ -16,9 +16,10 @@ Kubernetes has a uniform Resource Model for all interactions you'll have with it
        k logs echoserver
        k get pod echoserver -o yaml
 
-   Note how the YAML file shown is an extended version of the [echo.pod.yaml](files/echo.pod.yaml) which we _applied_. The additional fields are what the Kubernetes added to it when it _reconciled_ the _intent_ expressed by our original YAML.
+   Note how the YAML shown is an extended version of the [echo.pod.yaml](files/echo.pod.yaml), which we _applied_ above.
+   The additional fields are what Kubernetes added when it _reconciled_ the _intent_ expressed by our original YAML.
 
-1. This _Pod_ is a (built-in) KRM API resource "kind". We can see all of them like this:
+1. This _Pod_ is a (built-in) KRM API resource "kind" (type). We can see all of them like this:
 
        k api-resources
        k api-versions
