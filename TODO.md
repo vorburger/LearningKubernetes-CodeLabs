@@ -14,7 +14,10 @@
   - [ ] https://knative.dev
   - [ ] https://www.openfaas.com
 
-- [ ] Use https://github.com/monopole/mdrip to validate the lessons!
+- [ ] Use https://github.com/monopole/mdrip to validate the lessons! (And add a "used by" section to its README.)
+  Contribute the same to kubebuilder, see https://github.com/kubernetes-sigs/kubebuilder/issues/711
+
+- [ ] contribute https://github.com/vorburger/LearningKubernetes-CodeLabs/blob/develop/docs/kubebuilder.md to https://book.kubebuilder.io as simpler first lesson before the full-blown cronjob example
 
 - [ ] Other Kubernetes distributions than `minikube`:
 
