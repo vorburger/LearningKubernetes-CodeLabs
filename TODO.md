@@ -2,7 +2,7 @@
 
 - [ ] [`kind`](https://kind.sigs.k8s.io/docs/user/quick-start/) (and [here](https://book.kubebuilder.io/reference/kind.html)) as another Kubernetes "distributions" than `minikube` in [docs/install.md](docs/install.md)
 
-- [ ] contribute https://github.com/vorburger/LearningKubernetes-CodeLabs/blob/develop/docs/kubebuilder.md to https://book.kubebuilder.io as simpler first lesson before the full-blown cronjob example
+- [ ] contribute https://github.com/vorburger/LearningKubernetes-CodeLabs/blob/develop/docs/kubebuilder.md to https://book.kubebuilder.io as simpler first lesson before the full-blown cronjob example.
 
 - [ ] Additional New Lessons
 
@@ -15,6 +15,7 @@
 
   - [ ] https://googlecontainertools.github.io/kpt/
   - [ ] https://fluxcd.io
+  - [ ] https://shipwright.io
 
   - [ ] https://github.com/prometheus-operator/kube-prometheus#installing
   - [ ] https://github.com/prometheus-operator/prometheus-operator
