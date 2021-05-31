@@ -7,7 +7,7 @@ MD034: false
 # https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md046---code-block-style
 MD046:
   # default style 'indented' prevents setting code block language
-  style: consistent
+  style: "consistent"
 
 MD013:
   line_length: 4096
