@@ -31,7 +31,7 @@
   - [ ] https://k8slens.dev
 
 - [ ] Listen in to [Kubebuilder, Controller Runtime, and Controller Tools Meeting](https://docs.google.com/document/d/1Ih-2cgg1bUrLwLVTB9tADlPcVdgnuMNBGbUl4D-0TIk/)
- 
+
 - [ ] Use https://github.com/monopole/mdrip to validate the lessons! (And add a "used by" section to its README.)
   Contribute the same to kubebuilder, see https://github.com/kubernetes-sigs/kubebuilder/issues/711
 
