@@ -74,7 +74,6 @@ based on [Eclipse Theia](https://theia-ide.org), are a great choice. Alternative
        make install
        diff config/crd/bases/learning.vorburger.ch_foos.yaml config/crd/bases/learning.vorburger.ch_foos.original.yaml
 
-
 1. edit the `controllers/foo_controller.go` and change the `Reconcile` function to look like this:
 
    ```go
