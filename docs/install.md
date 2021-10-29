@@ -47,6 +47,11 @@ https://cloud.google.com/shell is an easy to use and ready-made VM which already
 2. `minikube start`
 3. `alias k="minikube kubectl -- "`
 
+To be able to use e.g. GitHub by `ssh` from this shell, do:
+
+     ln -s ~/.ssh/google_compute_engine ~/.ssh/id_rsa
+     ln -s ~/.ssh/google_compute_engine.pub ~/.ssh/id_rsa.pub
+
 ### Google Kubernetes Engine (GKE)
 
 See https://cloud.google.com/kubernetes-engine.
