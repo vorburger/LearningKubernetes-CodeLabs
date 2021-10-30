@@ -9,7 +9,7 @@ MD046:
   # 'indented' prevents setting code block language
   # 'fenced' enforces ``` and thus prevents indenting, which is nicer to read in raw ASCII where posible
   # 'consistent' prevents mixing indenting (without code block language) and fenced with code block language, which is useful
-  style: "false"
+  style: false
 
 MD013:
   line_length: 4096
