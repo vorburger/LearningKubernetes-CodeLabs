@@ -6,7 +6,7 @@ To follow the lessons in this tutorial, you need to have the following prerequis
 1. configuration to access it (in a `~/.kube/config` file)
 1. the `kubectl` CLI binary, aliased to `k`
 
-There are different ways to set this up - pick one of the options below! (Alternatives include e.g. `kind`, `kubeadm`, k3s.io, microk8s.io, OpenShift, and others; we may add documentation about them later.)
+There are different ways to set this up - pick one of the options below! (Alternatives include e.g. `kind`, `kubeadm`, k3s.io, microk8s.io, OpenShift, and others; we may add documentation about them later.) If you play with several of these, then [kubectx](fun/kubectx-kubens.md) is handy.
 
 ## Local (or VM) Installations
 
@@ -54,7 +54,14 @@ To be able to use e.g. GitHub by `ssh` from this shell, do:
 
 ### Google Kubernetes Engine (GKE)
 
-See https://cloud.google.com/kubernetes-engine.
+See https://cloud.google.com/kubernetes-engine/docs/quickstart, after [having enabled  Kubernetes Engine API](https://cloud.google.com/billing/docs/how-to/modify-project#confirm_billing_is_enabled_on_a_project):
+
+    gcloud --project=XXX container clusters create-auto cluster1 --zone=europe-west4
+    gcloud container clusters get-credentials cluster1 --project=XXX --region=europe-west4
+
+[Autopilot clusters accrue a flat fee of $0.10/h](https://cloud.google.com/kubernetes-engine/pricing) (=$75/month, $890/year), so  when you're done learning, don't forget to:
+
+    gcloud container clusters delete cluster1
 
 ## Test the Installation
 
