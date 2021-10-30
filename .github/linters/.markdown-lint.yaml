@@ -6,8 +6,10 @@ MD034: false
 
 # https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md046---code-block-style
 MD046:
-  # default style 'indented' prevents setting code block language
-  style: "consistent"
+  # 'indented' prevents setting code block language
+  # 'fenced' enforces ``` and thus prevents indenting, which is nicer to read in raw ASCII where posible
+  # 'consistent' prevents mixing indenting (without code block language) and fenced with code block language, which is useful
+  style: "false"
 
 MD013:
   line_length: 4096
