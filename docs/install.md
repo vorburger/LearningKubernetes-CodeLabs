@@ -54,8 +54,9 @@ To be able to use e.g. GitHub by `ssh` from this shell, do:
 
 ### Google Kubernetes Engine (GKE)
 
-See https://cloud.google.com/kubernetes-engine/docs/quickstart, after [having enabled  Kubernetes Engine API](https://cloud.google.com/billing/docs/how-to/modify-project#confirm_billing_is_enabled_on_a_project):
+See https://cloud.google.com/kubernetes-engine/docs/quickstart, after [having enabled billing](https://cloud.google.com/billing/docs/how-to/modify-project#confirm_billing_is_enabled_on_a_project):
 
+    gcloud services enable container.googleapis.com
     gcloud --project=XXX container clusters create-auto cluster1 --zone=europe-west4
     gcloud container clusters get-credentials cluster1 --project=XXX --region=europe-west4
 
