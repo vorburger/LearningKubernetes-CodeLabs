@@ -2,8 +2,6 @@
 
 - [ ] [`kind`](https://kind.sigs.k8s.io/docs/user/quick-start/) (and [here](https://book.kubebuilder.io/reference/kind.html)) as another Kubernetes "distributions" than `minikube` in [docs/install.md](docs/install.md)
 
-- [ ] contribute https://github.com/vorburger/LearningKubernetes-CodeLabs/blob/develop/docs/kubebuilder.md to https://book.kubebuilder.io as simpler first lesson before the full-blown cronjob example.
-
 - [ ] Additional New Lessons
 
   - [ ] API: Run Foo Controller against https://github.com/kcp-dev/kcp instead of "real" (mini)kube
@@ -16,6 +14,8 @@
   - [ ] https://googlecontainertools.github.io/kpt/
   - [ ] https://fluxcd.io
   - [ ] https://shipwright.io
+
+  - [ ] https://github.com/kubernetes-sigs/application/blob/master/README.md
 
   - [ ] https://github.com/prometheus-operator/kube-prometheus#installing
   - [ ] https://github.com/prometheus-operator/prometheus-operator
@@ -67,3 +67,5 @@
 - [ ] https://github.com/googlecodelabs/tools ?
 
 - [ ] https://codelabs.developers.google.com ?
+
+- [ ] contribute https://github.com/vorburger/LearningKubernetes-CodeLabs/blob/develop/docs/kubebuilder.md to https://book.kubebuilder.io as simpler first lesson before the full-blown cronjob example.
