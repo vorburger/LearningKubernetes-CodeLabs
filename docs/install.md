@@ -6,7 +6,7 @@ To follow the lessons in this tutorial, you need to have the following prerequis
 1. configuration to access it (in a `~/.kube/config` file)
 1. the `kubectl` CLI binary, aliased to `k`
 
-There are different ways to set this up - pick one of the options below! (Alternatives include e.g. `kind`, `kubeadm`, k3s.io, microk8s.io, OpenShift, and others; we may add documentation about them later.) If you play with several of these, then [kubectx](fun/kubectx-kubens.md) is handy.
+There are different ways to set this up - pick one of the options below! (Alternatives include e.g. `kind`, `kubeadm`, k3s.io, microk8s.io, OpenShift, [kURL](https://kurl.sh), and others; we may add documentation about them later.) If you play with several of these, then [kubectx](fun/kubectx-kubens.md) is handy.
 
 ## Local (or VM) Installations
 
