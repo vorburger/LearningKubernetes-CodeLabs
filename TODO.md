@@ -35,6 +35,8 @@
 - [ ] Use https://github.com/monopole/mdrip to validate the lessons! (And add a "used by" section to its README.)
   Contribute the same to kubebuilder, see https://github.com/kubernetes-sigs/kubebuilder/issues/711
 
+- https://cloud.google.com/shell/docs/cloud-shell-tutorials/tutorials
+
 - [ ] Other Kubernetes distributions than `minikube`:
 
   - [ ] kubeadm.. on CoreOS?
