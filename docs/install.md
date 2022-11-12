@@ -12,9 +12,11 @@ There are different ways to set this up - pick one of the options below! (Altern
 
 ### minikube
 
-One of easiest ways to get started on a developer workstation is to use https://minikube.sigs.k8s.io/docs/start, and:
+One of easiest ways to get started on a developer workstation is to use https://minikube.sigs.k8s.io/docs/start,
+with a [fixed](https://minikube.sigs.k8s.io/docs/handbook/config/#selecting-a-kubernetes-version)
+kubernetes [release](https://kubernetes.io/releases/):
 
-    minikube start
+    minikube start --kubernetes-version=v1.25.3
     alias k="minikube kubectl -- "
 
 This typically creates a VM, and works equally well on Windows, Mac and Linux.
@@ -36,6 +38,15 @@ e.g. with Debian 10 simply:
     sudo chown -R $(id -un):$(id -gn $(id -un)) ~/.kube/
     sudo chown -R $(id -un):$(id -gn $(id -un)) ~/.minikube/
     alias k="minikube kubectl -- "
+
+### minikube on Fedora with rootless Podman
+
+https://minikube.sigs.k8s.io/docs/drivers/podman/ does not appear to really work at least on Fedora 36 Workstation, this hangs and fails:
+
+    minikube config set rootless true
+    minikube start --kubernetes-version=v1.25.3 --driver=podman --container-runtime=containerd
+
+However on Fedora 36 Workstation, `minikube start` (above) should just automatically select [the kvm2 driver](https://minikube.sigs.k8s.io/docs/drivers/kvm2/), and work as-is out of the box.
 
 ### Talos
 
