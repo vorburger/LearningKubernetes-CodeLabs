@@ -7,6 +7,10 @@ or [GKE's Quickstart](https://cloud.google.com/kubernetes-engine/docs/quickstart
 ## [echoserver](https://github.com/kubernetes/kubernetes/tree/master/test/images/echoserver)
 
     $ k create deployment echoserver --image=k8s.gcr.io/echoserver:1.10
+    $ k port-forward deployment/echoserver 8080
+
+The `echoserver` web page is now available at http://localhost:8080.  We can also create a `service` to expose it externally, like this:
+
     $ k expose deployment echoserver --type=LoadBalancer --port=8080
     $ k get service echoserver
     NAME         TYPE           CLUSTER-IP   EXTERNAL-IP     PORT(S)          AGE
@@ -23,6 +27,15 @@ That's usually the case in a "managed hosted Kubernetes", such as GKE or EKS etc
 
 * When using [`kind`](install.md#kind) you could e.g.
   use [extra port mappings](https://kind.sigs.k8s.io/docs/user/configuration/#extra-port-mappings) (such as [these](files/sidero-kind.yaml)).
+
+* When using a _"bare metal"_ kind of installation on a real physical machine (e.g. with [Talos](install.md#talos)), or 
+  e.g. the [minikube None driver](install.md#minikube-none-driver) which would run the `echoserver` container directly on the respective machine,
+  you could also expose it as a `NodePort` service for it to be available on http://localhost:30xxx, where 30xxx is the port shown:
+  
+      $ k expose deployment echoserver --type=NodePort --port=8080
+      $ k get service echoserver
+      NAME         TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+      echoserver   NodePort   10.109.191.180   <none>        8080:30xxx/TCP   55s
 
 Now execute the following commands to have a look at what Kubernetes created based on the commands above:
 
