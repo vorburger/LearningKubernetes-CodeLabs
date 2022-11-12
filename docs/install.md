@@ -10,7 +10,18 @@ There are different ways to set this up - pick one of the options below! (Altern
 
 ## Local (or VM) Installations
 
+### kind
+
+https://kind.sigs.k8s.io is kind enough to make it as easy as:
+
+    go install sigs.k8s.io/kind@v0.17.0
+
+    kind create cluster
+
+
 ### minikube
+
+#### minikube with KVM
 
 One of easiest ways to get started on a developer workstation is to use https://minikube.sigs.k8s.io/docs/start,
 with a [fixed](https://minikube.sigs.k8s.io/docs/handbook/config/#selecting-a-kubernetes-version)
@@ -39,12 +50,17 @@ e.g. with Debian 10 simply:
     sudo chown -R $(id -un):$(id -gn $(id -un)) ~/.minikube/
     alias k="minikube kubectl -- "
 
-### minikube on Fedora with rootless Podman
+### minikube on Fedora with Podman instead of KVM
 
-https://minikube.sigs.k8s.io/docs/drivers/podman/ does not appear to really work at least on Fedora 36 Workstation, this hangs and fails:
+https://minikube.sigs.k8s.io/docs/drivers/podman/ both rootless and as root does not appear to work :( as of 2022.1111.12 at least on Fedora 36 Workstation, e.g. this hangs and fails:
 
     minikube config set rootless true
-    minikube start --kubernetes-version=v1.25.3 --driver=podman --container-runtime=containerd
+    minikube start --kubernetes-version=v1.25.3 --profile=rootless-podman --driver=podman --container-runtime=containerd --listen-address=0.0.0.0
+
+similarly this also does not work:
+
+    minikube config set rootless false
+    minikube start --kubernetes-version=v1.25.3 --profile=root-podman --driver=podman --listen-address=0.0.0.0
 
 However on Fedora 36 Workstation, `minikube start` (above) should just automatically select [the kvm2 driver](https://minikube.sigs.k8s.io/docs/drivers/kvm2/), and work as-is out of the box.
 

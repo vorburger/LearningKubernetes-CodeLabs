@@ -14,11 +14,17 @@ or [GKE's Quickstart](https://cloud.google.com/kubernetes-engine/docs/quickstart
 
 The `echoserver` web page is now available at http://a.b.c.d:8080.
 If the external IP address is still shown as _"pending",_ then wait for a minute and retry.
-BTW when using [`minikube`](install.md#minikube) there may not be an `EXTERNAL-IP`, then you have to use `minikube service` instead:
+This assumes that your Kubernets Cluster has a Load Balancer, which actually will assign such an external IP.
+That's usually the case in a "managed hosted Kubernetes", such as GKE or EKS etc. but otherwise:
 
-    $ minikube service --url=true echoserver
+* When using [`minikube`](install.md#minikube), then you can just use `minikube service` instead:
 
-Execute the following commands to have a look at what Kubernetes created based on the commands above:
+      $ minikube service --url=true echoserver
+
+* When using [`kind`](install.md#kind) you could e.g.
+  use [extra port mappings](https://kind.sigs.k8s.io/docs/user/configuration/#extra-port-mappings) (such as [these](files/sidero-kind.yaml)).
+
+Now execute the following commands to have a look at what Kubernetes created based on the commands above:
 
     $ k describe service echoserver
     $ k get -o yaml service echoserver

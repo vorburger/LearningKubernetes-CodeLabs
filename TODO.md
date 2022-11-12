@@ -1,7 +1,5 @@
 # ToDo
 
-- [ ] [`kind`](https://kind.sigs.k8s.io/docs/user/quick-start/) (and [here](https://book.kubebuilder.io/reference/kind.html)) as another Kubernetes "distributions" than `minikube` in [docs/install.md](docs/install.md)
-
 - [ ] Additional New Lessons
 
   - [ ] API: Run Foo Controller against https://github.com/kcp-dev/kcp instead of "real" (mini)kube
