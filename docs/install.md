@@ -37,6 +37,10 @@ e.g. with Debian 10 simply:
     sudo chown -R $(id -un):$(id -gn $(id -un)) ~/.minikube/
     alias k="minikube kubectl -- "
 
+### Talos
+
+See https://www.talos.dev/v1.2/introduction/quickstart/ for how to install a Talos Linux Kubernetes locally.
+
 ## Cloud Installations
 
 ### Google Cloud Shell minikube
