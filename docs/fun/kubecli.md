@@ -10,7 +10,6 @@ Use https://github.com/dty1er/kubecolor to bring some color to your bland `kubec
 
     k get pods
 
-
 ## kubectx & kubens
 
 Use https://github.com/ahmetb/kubectx (together with https://github.com/junegunn/fzf) to
@@ -20,7 +19,6 @@ easily switch between the different contexts and their default namespaces in you
 
     kubectx --help
     kubens --help
-
 
 ## TUIs
 

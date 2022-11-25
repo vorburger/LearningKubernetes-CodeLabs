@@ -18,7 +18,6 @@ https://kind.sigs.k8s.io is kind enough to make it as easy as:
 
     kind create cluster
 
-
 ### minikube
 
 #### minikube with KVM
@@ -91,7 +90,7 @@ See https://cloud.google.com/kubernetes-engine/docs/quickstart, after [having en
     gcloud --project=XXX container clusters create-auto cluster1 --zone=europe-west4
     gcloud container clusters get-credentials cluster1 --project=XXX --region=europe-west4
 
-[Autopilot clusters accrue a flat fee of $0.10/h](https://cloud.google.com/kubernetes-engine/pricing) (=$75/month, $890/year), so  when you're done learning, don't forget to:
+[Autopilot clusters accrue a flat fee of $0.10/h](https://cloud.google.com/kubernetes-engine/pricing) (=$75/month, $890/year), so when you're done learning, don't forget to:
 
     gcloud container clusters delete cluster1
 
