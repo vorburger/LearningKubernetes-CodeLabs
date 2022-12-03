@@ -28,6 +28,14 @@
   - [ ] https://www.openfaas.com
   - [ ] https://k8slens.dev
 
+  - [ ] Signal handling etc.
+    - https://cloud.google.com/blog/products/containers-kubernetes/kubernetes-best-practices-terminating-with-grace
+    - https://docs.docker.com/engine/reference/builder/#stopsignal
+    - https://github.com/nginxinc/docker-nginx/search?q=STOPSIGNAL
+    - https://petermalmgren.com/signal-handling-docker/
+    - https://github.com/Yelp/dumb-init
+    - https://aws.amazon.com/blogs/containers/graceful-shutdowns-with-ecs/
+
 - [ ] Listen in to [Kubebuilder, Controller Runtime, and Controller Tools Meeting](https://docs.google.com/document/d/1Ih-2cgg1bUrLwLVTB9tADlPcVdgnuMNBGbUl4D-0TIk/)
 
 - [ ] Use https://github.com/monopole/mdrip to validate the lessons! (And add a "used by" section to its README.)
