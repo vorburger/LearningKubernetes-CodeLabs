@@ -1,0 +1,11 @@
+# https://kubernetes.io/docs/concepts/security/pod-security-standards/
+# https://kubernetes.io/docs/concepts/security/pod-security-admission/
+# https://kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-namespace-labels/
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: privileged
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/audit: baseline
+    pod-security.kubernetes.io/warn: restricted
