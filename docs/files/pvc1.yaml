@@ -1,0 +1,57 @@
+# see https://kubernetes.io/docs/concepts/storage/persistent-volumes
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc1
+  # annotations:
+  #   volumeType: local
+spec:
+  accessModes:
+    # ToDo: Why does (better) ReadWriteOncePod not work? Not supported for local volumes? See https://kubernetes.io/blog/2021/09/13/read-write-once-pod-access-mode-alpha/
+    - ReadWriteOnce
+  storageClassName: "local-path" # https://github.com/rancher/local-path-provisioner
+  resources:
+    requests:
+      storage: 1M # rancher/local-path-provisioner ignores this (understandably)
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume-test
+spec:
+  containers:
+    - name: busybox
+      command: ["sleep", "infinity"]
+      image: docker.io/library/busybox:latest
+      imagePullPolicy: IfNotPresent
+      resources:
+        requests:
+          cpu: "250m"
+          memory: "64Mi"
+        limits:
+          cpu: "1000m"
+          memory: "512Mi"
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+            - ALL
+        privileged: false
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
+        runAsUser: 1000
+        seccompProfile:
+          type: RuntimeDefault
+        seLinuxOptions: {}
+      volumeMounts:
+        - name: pvc1
+          mountPath: /data
+        # - name: pv2
+        #   mountPath: /saturn
+  volumes:
+    - name: pvc1
+      persistentVolumeClaim:
+        claimName: pvc1
+    # - name: pv2
+    #   hostPath:
+    #     path: /var/mnt/nvme1/
