@@ -4,7 +4,7 @@
 # Bare URL are OK
 MD034: false
 
-# https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md046---code-block-style
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md046---code-block-style
 # style: "indented" prevents setting code block language
 # style: "fenced" enforces ``` and thus prevents indenting, which is nicer to read in raw ASCII where posible
 # style: "consistent" prevents mixing indenting (without code block language) and fenced with code block language, which is useful
